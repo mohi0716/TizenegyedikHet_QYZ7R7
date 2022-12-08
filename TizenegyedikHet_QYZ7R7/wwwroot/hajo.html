@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title></title> 
+</head>
+<body>
+    <div id="külső">
+        <div id="kérdés_szöveg">
+            Kérdés szövege
+        </div>
+
+        <div id="középső">
+            <div id="válaszok">
+                <div id="válasz1" onclick="választás(1)" class="kerdes kattintható"><p>Válasz 1</p></div>
+                <div id="válasz2" onclick="választás(2)" class="kerdes kattintható"><p>Válasz 2</p></div>
+                <div id="válasz3" onclick="választás(3)" class="kerdes kattintható"><p>Válasz 3</p></div>
+            </div>
+            <div id="kép">
+                <img id="kép1" src="https://kzgzdiag426.blob.core.windows.net/netcore/teszt-0050.jpg" />
+            </div>
+        </div>
+        <div id="vezérlő">
+            <div class="gomb kattintható">Vissza</div>
+            <div class="gomb kattintható">Előre</div>
+        </div>
+    </div>
+
+    <div id="vezérlő">
+        <div id="vissza_gomb" class="gomb kattintható">Vissza</div>
+        <div id="előre_gomb" class="gomb kattintható">Előre</div>
+    </div>
+
+
+    <style>
+        html, body {
+            height: 100%;
+            background-color: darkblue;
+            color: white;
+        }
+
+
+
+        div {
+            margin: 10px;
+        }
+
+        #külső {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #kérdés_szöveg {
+        }
+
+        #középső {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1 /*Ha van lehetőség növekedni, növekedni fog*/
+        }
+
+        #válaszok {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        #vezérlő {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        #kép {
+            overflow: hidden;
+            /*Felesleges, a kép túlnyúló részét rejtené el*/
+            flex-shrink: 0;
+            width: 50%;
+        }
+
+        .gomb {
+            padding: 20px;
+            width: 80px;
+        }
+
+        .kerdes {
+            height: 8%;
+            background-color: blue;
+        }
+
+        .kattintható:hover {
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        p {
+            font-size: 150%;
+            text-align: center;
+        }
+
+        .jó {
+        }
+
+        .rossz {
+        }
+    </style>
+
+    <script src="main.js"></script>
+</body>
+</html>
