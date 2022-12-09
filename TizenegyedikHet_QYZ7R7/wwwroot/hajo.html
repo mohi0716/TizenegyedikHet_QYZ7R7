@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title></title> 
+
+    <title></title>
+    <script src="main.js"></script>
 </head>
 <body>
     <div id="külső">
@@ -23,8 +24,8 @@
             </div>
         </div>
         <div id="vezérlő">
-            <div class="gomb kattintható">Vissza</div>
-            <div class="gomb kattintható">Előre</div>
+            <div class="gomb kattintható" id="vissza_gomb">Vissza</div>
+            <div class="gomb kattintható" id="előre_gomb">Előre</div>
         </div>
     </div>
 
@@ -54,6 +55,7 @@
         }
 
         #kérdés_szöveg {
+            font-size: 24px;
         }
 
         #középső {
@@ -95,19 +97,22 @@
             background-color: cornflowerblue;
             color: white;
         }
-
+        .rejtett {
+            visibility: hidden;
+        }
         p {
             font-size: 150%;
             text-align: center;
         }
 
         .jó {
+            background-color: green;
         }
 
         .rossz {
+            background-color: red;
         }
     </style>
 
-    <script src="main.js"></script>
 </body>
 </html>

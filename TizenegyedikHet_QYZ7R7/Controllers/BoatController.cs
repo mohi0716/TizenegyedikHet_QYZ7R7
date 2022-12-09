@@ -31,6 +31,13 @@ namespace TizenegyedikHet_QYZ7R7.Controllers
 
             return new JsonResult(kérdés);
         }
+        [HttpGet]
+        [Route("questions/count")]
+        public IActionResult M3()
+        {
+            HajosContext context = new HajosContext();
 
+            return Ok(context.Questions.Count());
+        }
     }
 }
